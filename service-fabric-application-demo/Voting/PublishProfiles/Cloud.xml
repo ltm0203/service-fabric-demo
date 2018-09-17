@@ -20,7 +20,10 @@
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="" />
+  <ClusterConnectionParameters ConnectionEndpoint="win243k2zczifp.westus.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="1A5166672F9374B7C3A7637F201B0D3F677D16BB" FindType="FindByThumbprint" FindValue="1A5166672F9374B7C3A7637F201B0D3F677D16BB" StoreLocation="CurrentUser" StoreName="My" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
   <CopyPackageParameters CompressPackage="true" />
+  <UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true">
+    <Parameters UpgradeReplicaSetCheckTimeoutSec="1" Force="True" />
+  </UpgradeDeployment>
 </PublishProfile>

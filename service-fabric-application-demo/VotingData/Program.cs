@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace VotingWeb
+namespace VotingData
 {
     internal static class Program
     {
@@ -20,10 +20,10 @@ namespace VotingWeb
                 // 在 Service Fabric 创建此服务类型的实例时，
                 // 会在此主机进程中创建类的实例。
 
-                ServiceRuntime.RegisterServiceAsync("VotingWebType",
-                    context => new VotingWeb(context)).GetAwaiter().GetResult();
+                ServiceRuntime.RegisterServiceAsync("VotingDataType",
+                    context => new VotingData(context)).GetAwaiter().GetResult();
 
-                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(VotingWeb).Name);
+                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(VotingData).Name);
 
                 // 防止此主机进程终止，以使服务保持运行。 
                 Thread.Sleep(Timeout.Infinite);
@@ -31,7 +31,6 @@ namespace VotingWeb
             catch (Exception e)
             {
                 ServiceEventSource.Current.ServiceHostInitializationFailed(e.ToString());
-                Console.WriteLine(e.ToString());
                 throw;
             }
         }

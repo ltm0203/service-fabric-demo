@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VotingType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VotingType" ApplicationTypeVersion="1.0.5" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
+    <Parameter Name="VotingData_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="VotingData_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="VotingData_PartitionCount" DefaultValue="1" />
+    <Parameter Name="VotingData_TargetReplicaSetSize" DefaultValue="3" />
     <Parameter Name="VotingWeb_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="VotingWeb_InstanceCount" DefaultValue="-1" />
   </Parameters>
@@ -8,7 +12,14 @@
        应与 ServiceManifest.xml 文件中定义的 ServiceManifest 元素的
        名称属性和版本属性相匹配。 -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="VotingWebPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="VotingDataPkg" ServiceManifestVersion="1.0.2" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[VotingData_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="VotingWebPkg" ServiceManifestVersion="1.0.4" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[VotingWeb_ASPNETCORE_ENVIRONMENT]" />
@@ -20,6 +31,11 @@
           一个或多个服务类型实例。
          
          以下属性 ServiceTypeName 必须与导入的 ServiceManifest.xml 文件中所定义的名称相匹配。 -->
+    <Service Name="VotingData" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="VotingDataType" TargetReplicaSetSize="[VotingData_TargetReplicaSetSize]" MinReplicaSetSize="[VotingData_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[VotingData_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
     <Service Name="VotingWeb" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="VotingWebType" InstanceCount="[VotingWeb_InstanceCount]">
         <SingletonPartition />
