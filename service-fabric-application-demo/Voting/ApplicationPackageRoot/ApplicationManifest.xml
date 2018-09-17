@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VotingType" ApplicationTypeVersion="1.0.5" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VotingType" ApplicationTypeVersion="1.0.8" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="VotingData_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="VotingData_MinReplicaSetSize" DefaultValue="3" />
@@ -19,7 +19,7 @@
     </EnvironmentOverrides>
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="VotingWebPkg" ServiceManifestVersion="1.0.4" />
+    <ServiceManifestRef ServiceManifestName="VotingWebPkg" ServiceManifestVersion="1.0.8" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[VotingWeb_ASPNETCORE_ENVIRONMENT]" />
