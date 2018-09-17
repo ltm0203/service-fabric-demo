@@ -7,7 +7,11 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "Voting", "Voting\Voting.sfp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotingWeb", "VotingWeb\VotingWeb.csproj", "{8B155069-B7D6-4E62-8DDA-955CE8DFE293}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingData", "VotingData\VotingData.csproj", "{2404ED2E-A2FB-4B0D-AB99-BB278E847E57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotingData", "VotingData\VotingData.csproj", "{2404ED2E-A2FB-4B0D-AB99-BB278E847E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceIot-demo", "OceIot-demo\OceIot-demo.csproj", "{E0AF3B56-B871-471E-917D-FE504916C9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceIot-DemoStart", "OceIot-DemoStart\OceIot-DemoStart.csproj", "{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,22 @@ Global
 		{2404ED2E-A2FB-4B0D-AB99-BB278E847E57}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2404ED2E-A2FB-4B0D-AB99-BB278E847E57}.Release|x64.ActiveCfg = Release|Any CPU
 		{2404ED2E-A2FB-4B0D-AB99-BB278E847E57}.Release|x64.Build.0 = Release|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0AF3B56-B871-471E-917D-FE504916C9DE}.Release|x64.Build.0 = Release|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
