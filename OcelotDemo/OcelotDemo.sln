@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotDemo", "OcelotDemo\OcelotDemo.csproj", "{BB10FD6B-CE2A-43AA-9219-F892106B588C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodApi", "GoodApi\GoodApi.csproj", "{F18644CA-60F7-43E8-A4D4-F1A338E9886D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi", "OrderApi\OrderApi.csproj", "{B18A964C-3EE5-49FE-BA79-3DD762AE6078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB10FD6B-CE2A-43AA-9219-F892106B588C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB10FD6B-CE2A-43AA-9219-F892106B588C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB10FD6B-CE2A-43AA-9219-F892106B588C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB10FD6B-CE2A-43AA-9219-F892106B588C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F18644CA-60F7-43E8-A4D4-F1A338E9886D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18644CA-60F7-43E8-A4D4-F1A338E9886D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18644CA-60F7-43E8-A4D4-F1A338E9886D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18644CA-60F7-43E8-A4D4-F1A338E9886D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18A964C-3EE5-49FE-BA79-3DD762AE6078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18A964C-3EE5-49FE-BA79-3DD762AE6078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18A964C-3EE5-49FE-BA79-3DD762AE6078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18A964C-3EE5-49FE-BA79-3DD762AE6078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9496963E-4870-4783-A313-E92B7B5ADBEF}
+	EndGlobalSection
+EndGlobal

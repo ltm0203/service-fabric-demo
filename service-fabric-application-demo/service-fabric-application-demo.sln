@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceIot-demo", "OceIot-demo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceIot-DemoStart", "OceIot-DemoStart\OceIot-DemoStart.csproj", "{B5B158F5-BF62-4AC0-9727-4EEDA35924E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot", "Ocelot", "{30737C3E-938E-47EF-B42F-F5E7C40700D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0AF3B56-B871-471E-917D-FE504916C9DE} = {30737C3E-938E-47EF-B42F-F5E7C40700D3}
+		{B5B158F5-BF62-4AC0-9727-4EEDA35924E5} = {30737C3E-938E-47EF-B42F-F5E7C40700D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1FC68C7-DAC2-4E88-80A6-DDD78F22B8D5}
