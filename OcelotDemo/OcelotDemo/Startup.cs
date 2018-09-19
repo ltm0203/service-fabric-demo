@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 namespace OcelotDemo
 {
@@ -26,6 +28,10 @@ namespace OcelotDemo
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
+
+                services.AddOcelot();
+                services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
@@ -47,6 +53,9 @@ namespace OcelotDemo
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            app.UseOcelot().Wait();//使用Ocelot中间件
+            
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
