@@ -18,7 +18,7 @@ namespace OrderApi
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args).UseUrls("http://localhost:1002")
                 .UseStartup<Startup>();
     }
 }
